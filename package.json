@@ -1,0 +1,33 @@
+{
+  "name": "react-native-card.io",
+  "version": "0.0.1",
+  "description": "A Card.io component for react-native",
+  "scripts": {
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BBB/card.io-react-native.git"
+  },
+  "author": "Ollie Relph <ollie@relph.me> (https://github.com/BBB)",
+  "bugs": {
+    "url": "https://github.com/BBB/card.io-react-native/issues"
+  },
+  "files": [
+    "BBBCardIO.xcodeproj",
+    "BBBCardIO.xcworkspace",
+    "BBBCardIO/BBBCardIO.h",
+    "BBBCardIO/BBBCardIO.m",
+    "README.md",
+    "lib/CardIO.ios.js"
+  ],
+  "homepage": "https://github.com/BBB/card.io-react-native#readme",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "react-native": "^0.11.2"
+  },
+  "peerDependencies": {
+    "react-native": "^0.11.2"
+  }
+}
