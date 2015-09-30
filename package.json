@@ -14,14 +14,6 @@
   "bugs": {
     "url": "https://github.com/BBB/card.io-react-native/issues"
   },
-  "files": [
-    "BBBCardIO.xcodeproj",
-    "BBBCardIO.xcworkspace",
-    "BBBCardIO/BBBCardIO.h",
-    "BBBCardIO/BBBCardIO.m",
-    "README.md",
-    "lib/CardIO.ios.js"
-  ],
   "homepage": "https://github.com/BBB/card.io-react-native#readme",
   "devDependencies": {
     "babel": "^5.8.23",
