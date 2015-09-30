@@ -39,8 +39,8 @@ export default class CardIO extends Component {
       onSuccess
     );
     const failureSubscription = NativeAppEventEmitter.addListener(
-      'cardIOSuccess',
-      onSuccess
+      'cardIOFailure',
+      onFailure
     );
 
     this.setState({
