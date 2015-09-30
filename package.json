@@ -1,6 +1,6 @@
 {
   "name": "react-native-card.io",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "A Card.io component for react-native",
   "scripts": {
     "compile": "babel -d lib/ src/",
