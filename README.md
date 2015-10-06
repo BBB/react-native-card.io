@@ -2,6 +2,12 @@
 
 A <CardIO> component for react-native (iOS only) for [card.io](https://www.card.io/)
 
+
+### TODO
+- [ ] Support Android
+- [ ] Support for overiding the `detectionMode`
+- [ ] Support for overiding the `scanOverlayView`
+
 ### Installation
 
 1. `npm i react-native-card.io --save`
