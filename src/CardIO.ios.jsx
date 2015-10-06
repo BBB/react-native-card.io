@@ -10,7 +10,6 @@ const BBBCardIO = requireNativeComponent('BBBCardIO', null);
 export default class CardIO extends Component {
 
   propTypes: {
-    pitchEnabled: React.PropTypes.bool,
     languageOrLocale: React.PropTypes.string,
     guideColor: React.PropTypes.string,
     useCardIOLogo: React.PropTypes.bool,
