@@ -20,9 +20,6 @@ A <CardIO> component for react-native (iOS only) for [card.io](https://www.card.
 
 Configuration options are specified as attributes on the `<CardIO />` element.
 
-#####`pitchEnabled`
-[PropTypes.bool] - 
-
 #####`languageOrLocale`
 **[ PropTypes.string ] - Defaults to the device's current language setting**
 
