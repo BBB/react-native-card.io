@@ -77,9 +77,9 @@ Set to `true` to show the card.io logo over the camera instead of the PayPal log
 
 **[ PropTypes.bool ] -  Defaults to `false`**
 
-Hide the PayPal or card.io logo in the scan view
+Hide the PayPal or card.io logo in the scan view.
 
-######`allowFreelyRotatingCardGuide`
+#####`allowFreelyRotatingCardGuide`
 **[ PropTypes.bool ] - Defaults to `true`**
 
 By default, in camera view the card guide and the buttons always rotate to match the device's orientation.
@@ -90,19 +90,19 @@ If you wish, the card guide and buttons can instead obey standard iOS constraint
 
 Set to `false` to follow standard iOS constraints. (Does not affect the manual entry screen.)
 
-######`scanInstructions`
+#####`scanInstructions`
 **[ PropTypes.string ] - Defaults to `null`**
 
 Set the scan instruction text. If `null`, use the default text.
 Use newlines as desired to control the wrapping of text onto multiple lines.
 
-######`scanExpiry`
+#####`scanExpiry`
 **[ PropTypes.bool ] - Defaults to `true`**
 
 Set to`false` if you don't want the camera to try to scan the card expiration.
 
 
-######`scannedImageDuration`
+#####`scannedImageDuration`
 **[ PropTypes.number ] - Defaults to 1.0**
 
 After a successful scan, the CardIOView will briefly display an image of the card with the computed card number superimposed. This property controls how long (in seconds) image will be displayed. 
@@ -111,13 +111,13 @@ Set this to 0.0 to suppress the display entirely.
 
 ---
 
-######`onSuccess`
+#####`onSuccess`
 
 **[ PropTypes.func ] - Defaults to `null`**
 
 A callback for successful card number scan.
 
-######`onFailure`
+#####`onFailure`
 
 **[ PropTypes.func ] - Defaults to `null`**
 
