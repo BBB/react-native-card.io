@@ -28,7 +28,7 @@ You can see the specific api usage [here](https://github.com/BBB/react-native-ca
 
 **Please don't forget to respect [card.io](https://www.card.io/) [open source contributors](https://github.com/card-io/card.io-iOS-SDK#with-or-without-cocoapods) by putting the acknowledgments in your app**
 
-```JS
+```JSX
 import React, {
   Component,
   View,
@@ -142,7 +142,7 @@ Set this to 0.0 to suppress the display entirely.
 
 This can be achieved by nesting a `<View />` within the `CardIO` view.
 
-```JS
+```JSX
 <CardIO
   ...props
 >
