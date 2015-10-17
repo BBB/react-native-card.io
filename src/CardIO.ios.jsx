@@ -7,15 +7,18 @@ import React, {
 
 import {
   SUPPORTED_LANGUAGES,
+  DETECTION_MODES,
 } from './constants';
 
 const BBBCardIO = requireNativeComponent('BBBCardIO', null);
 const languageOrLocale = React.PropTypes.oneOf(SUPPORTED_LANGUAGES);
+const detectionMode = React.PropTypes.oneOf(DETECTION_MODES);
 
 export default class CardIO extends Component {
 
   propTypes: {
     languageOrLocale: languageOrLocale,
+    detectionMode: detectionMode,
     guideColor: React.PropTypes.string,
     useCardIOLogo: React.PropTypes.bool,
     hideCardIOLogo: React.PropTypes.bool,

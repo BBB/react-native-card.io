@@ -5,7 +5,7 @@ A <CardIO> component for react-native (iOS only) for [card.io](https://www.card.
 
 ### TODO
 - [ ] Support Android
-- [ ] Support for overiding the `detectionMode`
+- [x] Support for overiding the `detectionMode`
 - [x] Support for overiding the `scanOverlayView`
 
 ### Installation
@@ -93,6 +93,19 @@ E.g., specifying "en" on a device set to "English" and "United Kingdom" will res
 ##### These localizations are currently included:
 
 `ar`, `da`, `de`, `en`, `en_AU`, `en_GB`, `es`, `es_MX`, `fr`, `he`, `is`, `it`, `ja`, `ko`, `ms`, `nb`, `nl`, `pl`, `pt`, `pt_BR`, `ru`, `sv`, `th`, `tr`, `zh-Hans`, `zh-Hant`, `zh-Hant_TW` 
+
+
+#### Detection Mode
+
+Prop `detectionMode`
+
+##### One of:
+
+`DETECTION_MODE.IMAGE_AND_NUMBER`: the scanner must successfully identify the card number.
+
+`DETECTION_MODE.IMAGE`: don't scan the card, just detect a credit-card-shaped card.
+
+`DETECTION_MODE.AUTOMATIC`: start as `IMAGE_AND_NUMBER`, but fall back to `IMAGE` if scanning has not succeeded within a reasonable time.
 
 #### Guide Color
 

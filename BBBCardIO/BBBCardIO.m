@@ -11,6 +11,14 @@
 #import "RCTEventDispatcher.h"
 #import "CardIO.h"
 
+@implementation RCTConvert (CardIODetectionMode)
+RCT_ENUM_CONVERTER(CardIODetectionMode, (@{
+                                           @"IMAGE_AND_NUMBER" : @(CardIODetectionModeCardImageAndNumber),
+                                           @"IMAGE" : @(CardIODetectionModeCardImageOnly),
+                                           @"AUTOMATIC" : @(CardIODetectionModeAutomatic)
+                                           }), CardIODetectionModeCardImageAndNumber, integerValue);
+@end
+
 @implementation BBBCardIO {
     CardIOView *cardIOView;
 }
@@ -36,7 +44,7 @@ RCT_EXPORT_VIEW_PROPERTY(scanInstructions, NSString);
 
 RCT_EXPORT_VIEW_PROPERTY(scanExpiry, BOOL);
 
-// RCT_EXPORT_VIEW_PROPERTY(detectionMode, CardIODetectionMode);
+RCT_EXPORT_VIEW_PROPERTY(detectionMode, CardIODetectionMode);
 
 RCT_EXPORT_VIEW_PROPERTY(scannedImageDuration, CGFloat);
 
