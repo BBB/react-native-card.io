@@ -10,6 +10,10 @@ A <CardIO> component for react-native (iOS only) for [card.io](https://www.card.
 
 ### Installation
 
+#### iOS
+
+A walkthrough with screenshots of each of the steps can be found [on my blog](http://ollie.relph.me/blog/credit-card-scanning-in-react-native/).
+
 1. `npm i react-native-card.io --save`
 1. Add the .xcodeproj from `node_modules/react-native-card.io/` to your .xcodeproj
 1. Add libBBBCardIO.a to "Build Phases -> Link Binary With Libraries"
