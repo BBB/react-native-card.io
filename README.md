@@ -1,6 +1,13 @@
-## react-native-card.io
+<h2 align="center">react-native-card.io</h2>
 
-A <CardIO> component for react-native (iOS only) for [card.io](https://www.card.io/)
+<p align="center">
+A <CardIO> component for react-native (iOS only) for <a href="https://www.card.io/" target="_blank">card.io</a>
+</p>
+
+<p align="center">
+  <a href="http://badge.fury.io/js/react-native-card.io"><img alt="npm version" src="https://badge.fury.io/js/react-native-card.io.svg"></a>
+  <a href="https://npmjs.org/package/react-native-card.io"><img alt="Downloads" src="http://img.shields.io/npm/dm/react-native-card.io.svg"></a>
+</p>
 
 
 ### TODO
