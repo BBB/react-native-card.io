@@ -6,7 +6,7 @@ A <CardIO> component for react-native (iOS only) for [card.io](https://www.card.
 ### TODO
 - [ ] Support Android
 - [ ] Support for overiding the `detectionMode`
-- [ ] Support for overiding the `scanOverlayView`
+- [x] Support for overiding the `scanOverlayView`
 
 ### Installation
 
@@ -137,6 +137,26 @@ Set to`false` if you don't want the camera to try to scan the card expiration.
 After a successful scan, the CardIOView will briefly display an image of the card with the computed card number superimposed. This property controls how long (in seconds) image will be displayed. 
 
 Set this to 0.0 to suppress the display entirely.
+
+#####`scanOverlayView`
+
+This can be achieved by nesting a `<View />` within the `CardIO` view.
+
+```JS
+<CardIO
+  ...props
+>
+  <View
+    style={
+      {
+        flex: 1,
+        backgroundColor: 'rgba(0,255,0,0.2)',
+      }
+    }
+  >
+  </View>
+</CardIO>
+```
 
 ---
 

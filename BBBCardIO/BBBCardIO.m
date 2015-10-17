@@ -36,8 +36,6 @@ RCT_EXPORT_VIEW_PROPERTY(scanInstructions, NSString);
 
 RCT_EXPORT_VIEW_PROPERTY(scanExpiry, BOOL);
 
-// RCT_EXPORT_VIEW_PROPERTY(scanOverlayView, UIView);
-
 // RCT_EXPORT_VIEW_PROPERTY(detectionMode, CardIODetectionMode);
 
 RCT_EXPORT_VIEW_PROPERTY(scannedImageDuration, CGFloat);
