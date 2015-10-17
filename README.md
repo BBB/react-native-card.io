@@ -20,6 +20,57 @@ A walkthrough with screenshots of each of the steps can be found [on my blog](ht
 1. Add "-lc++" to "Other Linker Flags"
 
 
+### Usage
+
+[Example App](https://github.com/BBB/react-native-card.io-example) 
+
+You can see the specific api usage [here](https://github.com/BBB/react-native-card.io-example/blob/master/src/containers/App.jsx)
+
+**Please don't forget to respect [card.io](https://www.card.io/) [open source contributors](https://github.com/card-io/card.io-iOS-SDK#with-or-without-cocoapods) by putting the acknowledgments in your app**
+
+```JS
+import React, {
+  Component,
+  View,
+} from 'react-native';
+
+import CardIO from 'react-native-card.io/ios';
+
+export default class App extends Component {
+  render() {
+    return (
+      <View
+        style={
+          {
+            position: 'absolute',
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0,
+          }
+        }
+      >
+        <CardIO
+          style={
+            {
+              flex: 1,
+              backgroundColor: 'black',
+            }
+          }
+          hideCardIOLogo={ true }
+          onSuccess={
+            ( cardInfo ) => console.log(cardInfo)
+          }
+          onFailure={
+            ( err ) => console.error(err)
+          }
+        />
+      </View>
+    );
+  }
+}
+```
+
 ### Options
 
 Configuration options are specified as attributes on the `<CardIO />` element.
@@ -101,53 +152,3 @@ A callback for successful card number scan.
 
 An error callback for a failed card number scan.
 
-### Usage
-
-[Example App](https://github.com/BBB/react-native-card.io-example) 
-
-You can see the specific api usage [here](https://github.com/BBB/react-native-card.io-example/blob/master/src/containers/App.jsx)
-
-**Please don't forget to respect [card.io](https://www.card.io/) [open source contributors](https://github.com/card-io/card.io-iOS-SDK#with-or-without-cocoapods) by putting the acknowledgments in your app**
-
-```JS
-import React, {
-  Component,
-  View,
-} from 'react-native';
-
-import CardIO from 'react-native-card.io/ios';
-
-export default class App extends Component {
-  render() {
-    return (
-      <View
-        style={
-          {
-            position: 'absolute',
-            top: 0,
-            right: 0,
-            bottom: 0,
-            left: 0,
-          }
-        }
-      >
-        <CardIO
-          style={
-            {
-              flex: 1,
-              backgroundColor: 'black',
-            }
-          }
-          hideCardIOLogo={ true }
-          onSuccess={
-            ( cardInfo ) => console.log(cardInfo)
-          }
-          onFailure={
-            ( err ) => console.error(err)
-          }
-        />
-      </View>
-    );
-  }
-}
-```
