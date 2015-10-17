@@ -1,3 +1,6 @@
+import { NativeModules } from 'react-native';
+const { BBBCardIO: { DETECTION_MODE } } = NativeModules;
+
 export const SUPPORTED_LANGUAGES = [
   'ar',
   'da',
@@ -28,10 +31,6 @@ export const SUPPORTED_LANGUAGES = [
   'zh-Hant_TW',
 ];
 
-export const DETECTION_MODE = {
-  IMAGE_AND_NUMBER: 'IMAGE_AND_NUMBER',
-  IMAGE: 'IMAGE',
-  AUTOMATIC: 'AUTOMATIC',
-};
+export { DETECTION_MODE };
 
 export const DETECTION_MODES = [ for ( key of Object.keys(DETECTION_MODE) ) DETECTION_MODE[ key ] ];

@@ -11,12 +11,10 @@
 #import "RCTEventDispatcher.h"
 #import "CardIO.h"
 
+#define DETECTION_MODE  @{ @"IMAGE_AND_NUMBER" : @(CardIODetectionModeCardImageAndNumber), @"IMAGE" : @(CardIODetectionModeCardImageOnly), @"AUTOMATIC" : @(CardIODetectionModeAutomatic) }
+
 @implementation RCTConvert (CardIODetectionMode)
-RCT_ENUM_CONVERTER(CardIODetectionMode, (@{
-                                           @"IMAGE_AND_NUMBER" : @(CardIODetectionModeCardImageAndNumber),
-                                           @"IMAGE" : @(CardIODetectionModeCardImageOnly),
-                                           @"AUTOMATIC" : @(CardIODetectionModeAutomatic)
-                                           }), CardIODetectionModeCardImageAndNumber, integerValue);
+RCT_ENUM_CONVERTER(CardIODetectionMode, (DETECTION_MODE), CardIODetectionModeCardImageAndNumber, integerValue);
 @end
 
 @implementation BBBCardIO {
@@ -54,20 +52,26 @@ RCT_EXPORT_VIEW_PROPERTY(scannedImageDuration, CGFloat);
     return cardIOView;
 }
 
+- (NSDictionary *)constantsToExport {
+  return @{
+    @"DETECTION_MODE": DETECTION_MODE,
+  };
+}
+
 #pragma mark - CardIOViewDelegate Methods
 
 - (void)cardIOView:(__unused CardIOView *)cardIOView didScanCard:(CardIOCreditCardInfo *)info {
     if (info) {
-        
+
         NSString *cardType = [CardIOCreditCardInfo displayStringForCardType: info.cardType
                                                       usingLanguageOrLocale: cardIOView.languageOrLocale];
-        
+
         NSMutableDictionary *cardInfo = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                          info.cardNumber, @"cardNumber",
                                          info.redactedCardNumber, @"redactedCardNumber",
                                          cardType, @"cardType",
                                          nil];
-        
+
         if(info.expiryMonth > 0 && info.expiryYear > 0) {
             [cardInfo setObject:[NSNumber numberWithUnsignedInteger:info.expiryMonth] forKey:@"expiryMonth"];
             [cardInfo setObject:[NSNumber numberWithUnsignedInteger:info.expiryYear] forKey:@"expiryYear"];
@@ -78,17 +82,17 @@ RCT_EXPORT_VIEW_PROPERTY(scannedImageDuration, CGFloat);
         if(info.postalCode.length > 0) {
             [cardInfo setObject:info.postalCode forKey:@"zip"];
         }
-        
+
         [self.bridge.eventDispatcher sendAppEventWithName:@"cardIOSuccess"
                                                      body:cardInfo];
     } else {
-        
+
         [self.bridge.eventDispatcher sendAppEventWithName:@"cardIOError"
                                                      body:@{
                                                             @"message": @"User cancelled payment info"
                                                             }];
     }
-    
+
     [cardIOView removeFromSuperview];
 }
 
