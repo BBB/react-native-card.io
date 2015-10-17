@@ -18,9 +18,9 @@
   "homepage": "https://github.com/BBB/card.io-react-native#readme",
   "devDependencies": {
     "babel": "^5.8.23",
-    "react-native": "^0.11.2"
+    "react-native": "^0.12.0"
   },
   "peerDependencies": {
-    "react-native": "^0.11.2"
+    "react-native": "^0.12.0"
   }
 }
