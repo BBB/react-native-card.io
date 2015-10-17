@@ -1,6 +1,6 @@
 {
   "name": "react-native-card.io",
-  "version": "0.1.3",
+  "version": "1.0.0",
   "description": "A Card.io component for react-native",
   "main": "lib/index.js",
   "scripts": {
