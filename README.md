@@ -75,8 +75,11 @@ export default class App extends Component {
 
 Configuration options are specified as attributes on the `<CardIO />` element.
 
-#####`languageOrLocale`
-**[ PropTypes.string ] - Defaults to the device's current language setting**
+#### Language or Locale
+
+Prop: `languageOrLocale`
+
+**Defaults to the device's current language setting**
 
 Can be specified as a language code ("en", "fr", "zh-Hans", etc.) or as a locale ("en\_AU", "fr\_FR", "zh-Hant\_HK", etc.).
 
@@ -87,29 +90,39 @@ If card.io does not contain localized strings for a specified language, then it 
 If you specify only a language code, and that code matches the device's currently preferred language, then card.io will attempt to use the device's current region as well.
 E.g., specifying "en" on a device set to "English" and "United Kingdom" will result in "en\_GB".
 
-###### These localizations are currently included:
+##### These localizations are currently included:
 
 `ar`, `da`, `de`, `en`, `en_AU`, `en_GB`, `es`, `es_MX`, `fr`, `he`, `is`, `it`, `ja`, `ko`, `ms`, `nb`, `nl`, `pl`, `pt`, `pt_BR`, `ru`, `sv`, `th`, `tr`, `zh-Hans`, `zh-Hant`, `zh-Hant_TW` 
 
-#####`guideColor`
-**[ PropTypes.string ] - Defaults to lime green**
+#### Guide Color
+
+Prop `guideColor`
+
+**Defaults to lime green**
 
 Alter the card guide (bracket) color. Opaque colors recommended.
 
-#####`useCardIOLogo`
+#### Use Card.io Logo
 
-**[ PropTypes.bool ] - Defaults to `false`**
+Prop `useCardIOLogo`
+
+**Defaults to `false`**
 
 Set to `true` to show the card.io logo over the camera instead of the PayPal logo.
 
-#####`hideCardIOLogo`
+#### Hide Card.io Logo
 
-**[ PropTypes.bool ] -  Defaults to `false`**
+Prop: `hideCardIOLogo`
+
+**Defaults to `false`**
 
 Hide the PayPal or card.io logo in the scan view.
 
-#####`allowFreelyRotatingCardGuide`
-**[ PropTypes.bool ] - Defaults to `true`**
+#### Allow Freely Rotating Card Guide
+
+Prop: `allowFreelyRotatingCardGuide`
+
+**Defaults to `true`**
 
 By default, in camera view the card guide and the buttons always rotate to match the device's orientation.
 
@@ -119,26 +132,39 @@ If you wish, the card guide and buttons can instead obey standard iOS constraint
 
 Set to `false` to follow standard iOS constraints. (Does not affect the manual entry screen.)
 
-#####`scanInstructions`
-**[ PropTypes.string ] - Defaults to `null`**
+#### Scan Instructions
+
+Prop: `scanInstructions`
+
+**Defaults to `null`**
 
 Set the scan instruction text. If `null`, use the default text.
 Use newlines as desired to control the wrapping of text onto multiple lines.
 
-#####`scanExpiry`
-**[ PropTypes.bool ] - Defaults to `true`**
+#### Scan Expiry
+
+Prop: `scanExpiry`
+
+**Defaults to `true`**
 
 Set to`false` if you don't want the camera to try to scan the card expiration.
 
 
-#####`scannedImageDuration`
-**[ PropTypes.number ] - Defaults to 1.0**
+#### Scanned Image Duration
+
+Prop: `scannedImageDuration`
+
+**Defaults to 1.0**
 
 After a successful scan, the CardIOView will briefly display an image of the card with the computed card number superimposed. This property controls how long (in seconds) image will be displayed. 
 
 Set this to 0.0 to suppress the display entirely.
 
-#####`scanOverlayView`
+
+---
+
+
+#### Scan Overlay View
 
 This can be achieved by nesting a `<View />` within the `CardIO` view.
 
@@ -160,13 +186,13 @@ This can be achieved by nesting a `<View />` within the `CardIO` view.
 
 ---
 
-#####`onSuccess`
+####`onSuccess`
 
 **[ PropTypes.func ] - Defaults to `null`**
 
 A callback for successful card number scan.
 
-#####`onFailure`
+####`onFailure`
 
 **[ PropTypes.func ] - Defaults to `null`**
 
