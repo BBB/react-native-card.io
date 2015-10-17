@@ -5,12 +5,17 @@ import React, {
   NativeAppEventEmitter,
 } from 'react-native';
 
+import {
+  SUPPORTED_LANGUAGES,
+} from './constants';
+
 const BBBCardIO = requireNativeComponent('BBBCardIO', null);
+const languageOrLocale = React.PropTypes.oneOf(SUPPORTED_LANGUAGES);
 
 export default class CardIO extends Component {
 
   propTypes: {
-    languageOrLocale: React.PropTypes.string,
+    languageOrLocale: languageOrLocale,
     guideColor: React.PropTypes.string,
     useCardIOLogo: React.PropTypes.bool,
     hideCardIOLogo: React.PropTypes.bool,
