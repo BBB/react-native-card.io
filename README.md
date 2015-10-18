@@ -206,15 +206,19 @@ This can be achieved by nesting a `<View />` within the `CardIO` view.
 
 ---
 
-####`onSuccess`
+#### Success Callback
 
-**[ PropTypes.func ] - Defaults to `null`**
+Prop: `onSuccess`
+
+**Defaults to `null`**
 
 A callback for successful card number scan.
 
-####`onFailure`
+#### Failure Callback
 
-**[ PropTypes.func ] - Defaults to `null`**
+Prop: `onFailure`
+
+**Defaults to `null`**
 
 An error callback for a failed card number scan.
 
