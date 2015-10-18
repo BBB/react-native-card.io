@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A Card.io component for react-native",
   "main": "lib/index.js",
+  "license": "MIT",
   "scripts": {
     "watch": "babel -d lib/ src/  --watch",
     "compile": "babel -d lib/ src/",
