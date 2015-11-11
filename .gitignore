@@ -37,4 +37,9 @@ Pods/
 
 node_modules/
 
-lib/
+.idea
+local.properties
+react-native-card.io.iml
+gradlew.bat
+gradlew
+gradle-wrapper.properties
