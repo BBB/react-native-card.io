@@ -5,8 +5,8 @@ A <CardIO> component for react-native (iOS only) for <a href="https://www.card.i
 </p>
 
 <p align="center">
-  <a href="http://badge.fury.io/js/react-native-card.io"><img alt="npm version" src="https://badge.fury.io/js/react-native-card.io.svg"></a>
-  <a href="https://npmjs.org/package/react-native-card.io"><img alt="Downloads" src="http://img.shields.io/npm/dm/react-native-card.io.svg"></a>
+  <a href="http://badge.fury.io/js/react-native-card.io"><img alt="npm version" src="https://badge.fury.io/js/react-native-card.io.svg?1.2.0"></a>
+  <a href="https://npmjs.org/package/react-native-card.io"><img alt="Downloads" src="http://img.shields.io/npm/dm/react-native-card.io.svg?1.2.0"></a>
 </p>
 
 
