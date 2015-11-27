@@ -33,4 +33,4 @@ export const SUPPORTED_LANGUAGES = [
 
 export { DETECTION_MODE };
 
-export const DETECTION_MODES = [ for ( key of Object.keys(DETECTION_MODE) ) DETECTION_MODE[ key ] ];
+export const DETECTION_MODES = Object.keys(DETECTION_MODE).reduce( ( arr, key ) => arr.concat([ DETECTION_MODE[ key ] ], []);
