@@ -78,6 +78,14 @@ export default class App extends Component {
 }
 ```
 
+### Methods
+
+`preload`
+
+The preload method prepares card.io to launch faster. Calling preload is optional but suggested.
+On an iPhone 5S, for example, preloading makes card.io launch ~400ms faster.
+The best time to call preload is when displaying a view from which card.io might be launched.
+
 ### Options
 
 Configuration options are specified as attributes on the `<CardIO />` element.
