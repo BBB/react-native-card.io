@@ -10,6 +10,7 @@
 #import "RCTBridge.h"
 #import "RCTEventDispatcher.h"
 #import "CardIO.h"
+#import "CardIOUtilities.h"
 
 #define DETECTION_MODE  @{ @"IMAGE_AND_NUMBER" : @(CardIODetectionModeCardImageAndNumber), @"IMAGE" : @(CardIODetectionModeCardImageOnly), @"AUTOMATIC" : @(CardIODetectionModeAutomatic) }
 
@@ -25,6 +26,10 @@ RCT_ENUM_CONVERTER(CardIODetectionMode, (DETECTION_MODE), CardIODetectionModeCar
 @synthesize bridge, methodQueue;
 
 RCT_EXPORT_MODULE(BBBCardIO);
+
+RCT_EXPORT_METHOD(preload) {
+   [CardIOUtilities preload];
+}
 
 RCT_EXPORT_VIEW_PROPERTY(pitchEnabled, BOOL);
 
