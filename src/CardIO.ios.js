@@ -6,8 +6,10 @@ import React, {
 } from 'react-native';
 
 import {
+  LIBRARY_VERSION,
   SUPPORTED_LANGUAGES,
   DETECTION_MODES,
+  CAN_READ_CARD_WITH_CAMERA,
 } from './constants';
 
 const BBBCardIO = requireNativeComponent('BBBCardIO', null);
@@ -17,6 +19,8 @@ const detectionMode = React.PropTypes.oneOf(DETECTION_MODES);
 export default class CardIO extends Component {
 
   propTypes: {
+    libraryVersion: LIBRARY_VERSION,
+    canReadCardWithCamera: CAN_READ_CARD_WITH_CAMERA,
     languageOrLocale: languageOrLocale,
     detectionMode: detectionMode,
     guideColor: React.PropTypes.string,
