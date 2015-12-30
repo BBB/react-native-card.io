@@ -58,9 +58,13 @@ RCT_EXPORT_VIEW_PROPERTY(scannedImageDuration, CGFloat);
 }
 
 - (NSDictionary *)constantsToExport {
-  return @{
-    @"DETECTION_MODE": DETECTION_MODE,
-  };
+    NSString *libraryVersion = [CardIOUtilities libraryVersion];
+    BOOL canReadCardWithCamera = [CardIOUtilities canReadCardWithCamera];
+    return @{
+        @"DETECTION_MODE": DETECTION_MODE,
+        @"LIBRARY_VERSION" : libraryVersion,
+        @"CAN_READ_CARD_WITH_CAMERA": @(canReadCardWithCamera)
+    };
 }
 
 #pragma mark - CardIOViewDelegate Methods

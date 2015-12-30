@@ -6,8 +6,10 @@ import React, {
 } from 'react-native';
 
 import {
+  LIBRARY_VERSION,
   SUPPORTED_LANGUAGES,
   DETECTION_MODES,
+  CAN_READ_CARD_WITH_CAMERA,
 } from './constants';
 
 const BBBCardIO = requireNativeComponent('BBBCardIO', null);
