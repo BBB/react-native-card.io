@@ -7,7 +7,6 @@
 //
 
 #import "BBBCardIO.h"
-#import "RCTBridge.h"
 #import "RCTEventDispatcher.h"
 #import "CardIO.h"
 #import "CardIOUtilities.h"
@@ -23,9 +22,14 @@ RCT_ENUM_CONVERTER(CardIODetectionMode, (DETECTION_MODE), CardIODetectionModeCar
 }
 
 
-@synthesize bridge, methodQueue;
+@synthesize bridge = _bridge;
 
 RCT_EXPORT_MODULE(BBBCardIO);
+
+- (dispatch_queue_t)methodQueue
+{
+  return dispatch_get_main_queue();
+}
 
 RCT_EXPORT_METHOD(preload) {
    [CardIOUtilities preload];
