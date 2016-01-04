@@ -1,5 +1,10 @@
 import { NativeModules } from 'react-native';
-const { BBBCardIO: { DETECTION_MODE } } = NativeModules;
+const {
+  BBBCardIO: {
+    DETECTION_MODE,
+    CAN_READ_CARD_WITH_CAMERA
+  }
+} = NativeModules;
 
 export const SUPPORTED_LANGUAGES = [
   'ar',
@@ -31,6 +36,6 @@ export const SUPPORTED_LANGUAGES = [
   'zh-Hant_TW',
 ];
 
-export { DETECTION_MODE };
+export { DETECTION_MODE, CAN_READ_CARD_WITH_CAMERA };
 
 export const DETECTION_MODES = Object.keys(DETECTION_MODE).reduce(( arr, key ) => arr.concat([ DETECTION_MODE[ key ] ]), []);
