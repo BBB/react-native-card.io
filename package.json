@@ -14,6 +14,12 @@
     "url": "git+https://github.com/BBB/card.io-react-native.git"
   },
   "author": "Ollie Relph <ollie@relph.me> (https://github.com/BBB)",
+  "contributors": [
+    {
+      "name": "Will Sahatdjian",
+      "email": "ws@taxfyle.com"
+    }
+  ],
   "bugs": {
     "url": "https://github.com/BBB/card.io-react-native/issues"
   },
