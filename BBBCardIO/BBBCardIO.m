@@ -31,7 +31,7 @@ RCT_EXPORT_MODULE(BBBCardIO);
 }
 
 RCT_EXPORT_METHOD(preload) {
-   [CardIOUtilities preload];
+    [CardIOUtilities preload];
 }
 
 RCT_EXPORT_VIEW_PROPERTY(pitchEnabled, BOOL);
