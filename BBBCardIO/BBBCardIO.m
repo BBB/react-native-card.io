@@ -7,7 +7,6 @@
 //
 
 #import "BBBCardIO.h"
-#import "RCTBridge.h"
 #import "RCTEventDispatcher.h"
 #import "CardIO.h"
 #import "CardIOUtilities.h"
@@ -23,12 +22,16 @@ RCT_ENUM_CONVERTER(CardIODetectionMode, (DETECTION_MODE), CardIODetectionModeCar
 }
 
 
-@synthesize bridge, methodQueue;
+@synthesize bridge = _bridge;
 
 RCT_EXPORT_MODULE(BBBCardIO);
 
+- (dispatch_queue_t)methodQueue {
+    return dispatch_get_main_queue();
+}
+
 RCT_EXPORT_METHOD(preload) {
-   [CardIOUtilities preload];
+    [CardIOUtilities preload];
 }
 
 RCT_EXPORT_VIEW_PROPERTY(pitchEnabled, BOOL);
@@ -58,9 +61,13 @@ RCT_EXPORT_VIEW_PROPERTY(scannedImageDuration, CGFloat);
 }
 
 - (NSDictionary *)constantsToExport {
-  return @{
-    @"DETECTION_MODE": DETECTION_MODE,
-  };
+    NSString *libraryVersion = [CardIOUtilities libraryVersion];
+    BOOL canReadCardWithCamera = [CardIOUtilities canReadCardWithCamera];
+    return @{
+        @"DETECTION_MODE": DETECTION_MODE,
+        @"LIBRARY_VERSION" : libraryVersion,
+        @"CAN_READ_CARD_WITH_CAMERA": @(canReadCardWithCamera)
+    };
 }
 
 #pragma mark - CardIOViewDelegate Methods
