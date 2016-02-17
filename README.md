@@ -1,3 +1,19 @@
+https://github.com/card-io/card.io-Android-SDK/blob/master/SampleApp/src/main/java/org/my/scanExample/MyScanActivity.java
+
+https://facebook.github.io/react-native/docs/native-components-android.html#content
+
+https://github.com/sejoker/react-native-android-vitamio/blob/master/src/main/java/com/RNVitamioView/VitamioViewManager.java
+
+
+### BOOM!
+https://github.com/jbrodriguez/react-native-android-sqlite
+
+https://github.com/ivanph/react-native-webintent/blob/master/src%2Fmain%2Fjava%2Fcom%2FRNWebIntent%2FRNWebIntentModule.java
+
+Event dispatching
+https://github.com/chymtt/ReactNativeDropdownAndroid/blob/master/android%2Fsrc%2Fmain%2Fjava%2Fcom%2Fchymtt%2Freactnativedropdown%2FDropdown.java
+
+
 <h2 align="center">react-native-card.io</h2>
 
 <p align="center">

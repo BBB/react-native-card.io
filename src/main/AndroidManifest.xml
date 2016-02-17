@@ -1,0 +1,14 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.BBB.BBBCardIO">
+  <!-- Permission to vibrate - recommended, allows vibration feedback on scan -->
+  <uses-permission android:name="android.permission.VIBRATE" />
+
+  <!-- Permission to use camera - required -->
+  <uses-permission android:name="android.permission.CAMERA" />
+
+  <!-- Camera features - recommended -->
+  <uses-feature android:name="android.hardware.camera" android:required="false" />
+  <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+  <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+
+</manifest>
